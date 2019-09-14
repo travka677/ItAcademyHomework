@@ -17,7 +17,7 @@ public abstract class Triangles extends Shapes implements TriangleHeight{
 
     public Triangles(double sideA, double sideB){
 
-        if (sideA == 0 || sideB == 0 || sideB > 2*sideA){
+        if (sideA <= 0 || sideB <= 0 || sideB > 2*sideA){
             throw new IllegalArgumentException("Incorrect side");
         }
         this.sideA = sideB;
@@ -26,7 +26,7 @@ public abstract class Triangles extends Shapes implements TriangleHeight{
 
     public Triangles(double sideA, double sideB, double sideC){
 
-        if (sideA == 0 || sideB == 0 || sideC == 0 || sideC > sideA+sideB){
+        if (sideA <= 0 || sideB <= 0 || sideC <= 0 || sideC > sideA+sideB){
             throw new IllegalArgumentException("Incorrect side");
         }
         this.sideA = sideA;

@@ -16,7 +16,7 @@ public class Task_3 {
     public static void main(String[] args) {
 
 
-        //(2x^0 + 1x^3 + 5x^4 + 5x^3 + 3x^4 = 2 + 6x^3 + 8x^4.)
+        //(2x^0 + 1x^3 + 5x^4 + 2x^1 + 5x^3 + 3x^4 = 2 + 2x + 6x^3 + 8x^4.)
 
         Map<Integer, Integer> map1 = new HashMap<>();  // многочлен 1
 
@@ -29,6 +29,7 @@ public class Task_3 {
 
         map2.put(3,5);
         map2.put(4,3);
+        map2.put(1,2);
 
 
         Map<Integer, Integer> result = new HashMap<>();  // результ слияния (многочлен 3)
@@ -67,7 +68,7 @@ public class Task_3 {
         for (Integer i : set2){
 
             System.out.print(map2.get(i)+"x^"+i);
-            if (i == (set2.size()+2)){
+            if (i == (set2.size()+1)){
                 System.out.print(" = ");
             }else {
                 System.out.print(" + ");
@@ -82,11 +83,13 @@ public class Task_3 {
 
             if (i == 0){
                 System.out.print(result.get(i));
-            }else{
+            }else if (i == 1) {
+                System.out.println(result.get(i) + "x");
+            } else {
                 System.out.print(result.get(i)+"x^"+i);
             }
 
-            if (i == (resultSet.size()+1)){
+            if (i == (resultSet.size())){
                 System.out.print(".");
             }else {
                 System.out.print(" + ");

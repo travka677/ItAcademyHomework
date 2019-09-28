@@ -22,7 +22,7 @@ public class Task_2 {
         System.out.println(marks);
 
 
-        Integer max = 0;
+        Integer max = marks.get(0);
 
         while (litr.hasPrevious()){
             Integer mark = litr.previous();

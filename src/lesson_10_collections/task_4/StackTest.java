@@ -31,6 +31,7 @@ public class StackTest {
                 stack.push(digit);
             }
             stack.printStack();
+
         } catch (Exception e){
             System.err.println("Error");
         }

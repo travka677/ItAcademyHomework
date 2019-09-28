@@ -31,25 +31,11 @@ public class Task_3 {
         System.out.println();
 
 
-
-
         // variant 2
         for (int i = students.size()-1; i >= 0; i--){
             System.out.print(students.get(i) + " ");
         }
         System.out.println();
 
-
-
-
-        // variant 3
-        ListIterator<String> litr2 = students.listIterator();
-
-        while (litr2.hasNext()){
-            litr2.next();
-        }
-        while (litr2.hasPrevious()){
-            System.out.print(litr2.previous() + " ");
-        }
     }
 }

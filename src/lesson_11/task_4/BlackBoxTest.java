@@ -13,17 +13,28 @@ public class BlackBoxTest {
 
         BlackBox box = new BlackBox();
 
-        box.addToBox(3);
-        box.addToBox(5);
-        box.addToBox(6);
-        box.addToBox(1);
-        box.addToBox(2);
+        box.add(3);
+        box.add(5);
+        box.add(5);
+        box.add(5);
+        box.add(5);
+        box.add(6);
+        box.add(6);
+        box.add(6);
+        box.add(6);
+        box.add(1);
+        box.add(1);
+        box.add(1);
+        box.add(1);
+        box.add(2);
+        box.add(2);
+        box.add(2);
 
         System.out.println(box.getNumbers());
 
-        System.out.println(box.min(3));
+        System.out.println(box.min(2));
 
-        System.out.println(box.max(0));
+        System.out.println(box.max(2));
 
 
     }

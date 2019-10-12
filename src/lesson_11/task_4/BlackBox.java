@@ -20,7 +20,7 @@ public class BlackBox{
     }
 
 
-    public void addToBox(Integer num){
+    public void add(Integer num){
         numbers.add(num);
     }
 
@@ -31,9 +31,12 @@ public class BlackBox{
 
     public Integer min(int k){
 
-        Collections.sort(numbers);
+        Set<Integer> set = new TreeSet<>();
+        set.addAll(numbers);
+        numbers.clear();
+        numbers.addAll(set);
 
-        if (k>0 && k<=numbers.size()){
+        if (k>0 && k<=set.size()){
             return numbers.get(k-1);
         } else {
             throw new IllegalArgumentException();
@@ -44,6 +47,10 @@ public class BlackBox{
 
     public Integer max(int n){
 
+        Set<Integer> set = new HashSet<>();
+        set.addAll(numbers);
+        numbers.clear();
+        numbers.addAll(set);
         Collections.sort(numbers);
         Collections.reverse(numbers);
 

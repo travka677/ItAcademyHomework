@@ -22,9 +22,9 @@ public class BattleGround {
         Hero[] heroes = {archer, warrior};
 
 
-        heroesVsEnemies(heroes, enemies);  // герои против злодеев
+        //heroesVsEnemies(heroes, enemies);  // герои против злодеев
 
-        //enemyVsHero(berserk, archer); // один на один
+        enemyVsHero(berserk, archer); // один на один
     }
 
 

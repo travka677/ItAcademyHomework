@@ -14,7 +14,7 @@ public class Test {
 
         try {
             throwRandomException();
-        }catch (ArithmeticException  | ArrayIndexOutOfBoundsException | NullPointerException e){
+        }catch (ArithmeticException | ArrayIndexOutOfBoundsException | NullPointerException e){
             e.printStackTrace();
         }
     }

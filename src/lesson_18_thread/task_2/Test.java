@@ -21,21 +21,8 @@ public class Test {
     public static void main(String[] args) {
 
         Dump dump = new Dump();
-        Factory factory = new Factory(dump);
+        new Factory(dump);
         Servant servant = new Servant(dump);
-        Scientist scientist = new Scientist(servant);
-
-        scientist.start();
-        factory.start();
-
-        try {
-            scientist.join();
-            factory.join();
-        }catch (InterruptedException e){
-
-        }
-
-        System.out.println(dump.getDump());
-        System.out.println(scientist.getCollected());
+        new Scientist(servant);
     }
 }

@@ -9,6 +9,7 @@ public class Factory extends Thread {
 
     public Factory(Dump dump){
         this.dump = dump;
+        start();
     }
 
 
@@ -24,6 +25,9 @@ public class Factory extends Thread {
     public void run() {
 
         for (int i = 1; i<=50; i++){
+            if (i == 1){
+                dump.setDump();
+            }
             toTheDump();
             try {
                 sleep(100);

@@ -19,7 +19,6 @@ public class Servant{
         dump.giveToTheServant(this, BAG_SIZE);
     }
 
-
     public List<Details> getBag() {
         return bag;
     }

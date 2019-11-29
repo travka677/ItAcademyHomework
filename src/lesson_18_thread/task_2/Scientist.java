@@ -16,12 +16,13 @@ public class Scientist extends Thread{
         this.servant = servant;
         collected = new ArrayList<>();
         getRobotTemplate();
+        start();
     }
 
-    // вывод в удобном формате
+    // Оставшиеся детали (вывод в удобном формате)
     public Map<Details, Integer> getCollected() {
-        Map<Details, Integer> map = new HashMap<>();
 
+        Map<Details, Integer> map = new HashMap<>();
         Integer counter = 0;
         for (Details i : Details.values()){
             for (Details j : collected){
@@ -67,7 +68,6 @@ public class Scientist extends Thread{
             servant.collect();
             System.out.println(i + " " + servant.getBag());
             takeawayServantBag();
-
             try {
                 sleep(100);
             } catch (InterruptedException e) {
@@ -76,6 +76,7 @@ public class Scientist extends Thread{
             makeRobot();
         }
 
-        System.out.println(count + " robots");
+        System.out.println(count + " robots were created");
+        System.out.println("Remaining details: " + getCollected());
     }
 }

@@ -67,7 +67,7 @@ public class Scientist extends Thread{
         for (int i = 1; i<=50; i++){
             if (i == 1){
                 try {
-                    sleep(10);
+                    sleep(1);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

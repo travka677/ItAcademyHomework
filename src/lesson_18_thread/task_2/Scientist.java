@@ -65,6 +65,13 @@ public class Scientist extends Thread{
     @Override
     public void run() {
         for (int i = 1; i<=50; i++){
+            if (i == 1){
+                try {
+                    sleep(10);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
             servant.collect();
             System.out.println(i + " " + servant.getBag());
             takeawayServantBag();

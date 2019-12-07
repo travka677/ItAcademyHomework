@@ -18,19 +18,17 @@ public class Dump {
     }
 
     // отдать детали прислужнику - удалить их со свалки
-    public void giveToTheServant(Servant servant, int number){
-        Random random = new Random();
-        int randAmount = (new Random().nextInt(number) + 1);
-
-        for (int i = 0; i<randAmount; i++){
-            if (dump.size() != 0){
+    public void giveToTheServant(Servant servant, int number) {
+        if (!dump.isEmpty()){
+            Random random = new Random();
+            int randAmount = (new Random().nextInt(number) + 1);
+            for (int i = 0; i < randAmount; i++) {
                 int randIndex = random.nextInt(dump.size());
                 servant.getBag().add(dump.get(randIndex));
                 dump.remove(randIndex);
             }
         }
     }
-
 
     public List<Details> getDump() {
         return dump;

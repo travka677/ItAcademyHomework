@@ -18,8 +18,5 @@ public class Coordinator implements Runnable {
         }
         factory.interrupt();
         Winner.determine(scientist_1, scientist_2);
-        System.out.println(factory.isAlive());
-        System.out.println(scientist_1.isAlive());
-        System.out.println(scientist_2.isAlive());
     }
 }

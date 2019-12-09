@@ -34,7 +34,7 @@ public class Factory extends Thread {
             try {
                 sleep(100);
             }catch (InterruptedException e){
-                interrupt();
+                break;
             }
         }
     }

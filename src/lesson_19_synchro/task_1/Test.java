@@ -1,4 +1,7 @@
-package lesson_19_synchro;
+package lesson_19_synchro.task_1;
+
+import lesson_19_synchro.task_1.Coordinator;
+
 /**
  * @author Daniil Kim
  * 1. Двое безумных учёных устроили соревнование, кто из них соберёт больше роботов за 100 ночей.

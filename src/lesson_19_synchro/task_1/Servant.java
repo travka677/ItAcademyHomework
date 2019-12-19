@@ -1,4 +1,7 @@
-package lesson_19_synchro;
+package lesson_19_synchro.task_1;
+import lesson_19_synchro.task_1.Details;
+import lesson_19_synchro.task_1.Dump;
+
 import java.util.*;
 
 /**

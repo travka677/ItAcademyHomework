@@ -1,4 +1,4 @@
-package lesson_19_synchro;
+package lesson_19_synchro.task_1;
 
 public class Coordinator implements Runnable {
 
